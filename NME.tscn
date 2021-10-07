@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://NME.gd" type="Script" id=1]
+[ext_resource path="res://T-RES/green_bevouliin_spriteframes.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://T-RES/nme_die.tres" type="Animation" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 17.8656, 29.9713 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 21.558, 3.63158 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 24, 5.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 24, 5.5 )
+
+[node name="NME" type="KinematicBody2D"]
+collision_layer = 16
+collision_mask = 35
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+rotation = 1.74846e-07
+scale = Vector2( 0.25, 0.25 )
+frames = ExtResource( 2 )
+frame = 1
+playing = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/die = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 6.94924 )
+shape = SubResource( 1 )
+
+[node name="FloorChecker" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, 45 )
+collision_mask = 2
+
+[node name="SquashChecker" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 33
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SquashChecker"]
+position = Vector2( 0, -28.7589 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="AttackChecker" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 49
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackChecker"]
+position = Vector2( -23.9655, 0 )
+rotation = -1.5708
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="AttackChecker"]
+position = Vector2( 24.285, 0 )
+rotation = 1.5708
+shape = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="body_entered" from="SquashChecker" to="." method="_on_SquashChecker_body_entered" flags=6]
+[connection signal="body_entered" from="AttackChecker" to="." method="_on_AttackChecker_body_entered" flags=6]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
