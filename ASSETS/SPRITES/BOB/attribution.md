@@ -1,0 +1,56 @@
+#Attributions
+
+ - "[TEMPLE RUN - FREE SPRITE](https://www.gameart2d.com/temple-run---free-sprites.html)" by [https://www.gameart2d.com/](https://www.gameart2d.com/) is licensed under [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+
+##Files
+
+ - Dead__000.png
+ - Dead__001.png
+ - Dead__002.png
+ - Dead__003.png
+ - Dead__004.png
+ - Dead__005.png
+ - Dead__006.png
+ - Dead__007.png
+ - Dead__008.png
+ - Dead__009.png
+ - Idle__000.png
+ - Idle__001.png
+ - Idle__002.png
+ - Idle__003.png
+ - Idle__004.png
+ - Idle__005.png
+ - Idle__006.png
+ - Idle__007.png
+ - Idle__008.png
+ - Idle__009.png
+ - Jump__000.png
+ - Jump__001.png
+ - Jump__002.png
+ - Jump__003.png
+ - Jump__004.png
+ - Jump__005.png
+ - Jump__006.png
+ - Jump__007.png
+ - Jump__008.png
+ - Jump__009.png
+ - Run__000.png
+ - Run__001.png
+ - Run__002.png
+ - Run__003.png
+ - Run__004.png
+ - Run__005.png
+ - Run__006.png
+ - Run__007.png
+ - Run__008.png
+ - Run__009.png
+ - Slide__000.png
+ - Slide__001.png
+ - Slide__002.png
+ - Slide__003.png
+ - Slide__004.png
+ - Slide__005.png
+ - Slide__006.png
+ - Slide__007.png
+ - Slide__008.png
+ - Slide__009.png
